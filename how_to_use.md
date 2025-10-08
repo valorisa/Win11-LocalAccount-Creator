@@ -165,15 +165,3 @@ Les suggestions et améliorations sont les bienvenues ! N'hésite pas à ouvrir 
 ---
 
 © 2025 [valorisa](https://github.com/valorisa)
-```
-
----
-
-### **Étapes pour Ajouter ce 
-### **Points Clés du Fichier**
-1. **Installation** : Étapes claires pour cloner le dépôt et préparer les scripts.
-2. **Utilisation des scripts** : Instructions détaillées pour les deux scripts (interactif et chiffré).
-3. **Automatisation** : Guide pour utiliser `unattend.xml` avec des exemples concrets.
-4. **Tests** : Méthodes pour tester les scripts en toute sécurité.
-5. **FAQ** : Réponses aux questions courantes.
-```
