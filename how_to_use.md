@@ -164,34 +164,16 @@ Les suggestions et améliorations sont les bienvenues ! N'hésite pas à ouvrir 
 
 ---
 
-© 2025 [(valorisa)](https://github.com/valorisa)
+© 2025 [valorisa](https://github.com/valorisa)
 ```
 
 ---
 
-### **Étapes pour Ajouter ce Fichier à Ton Projet**
-
-1. **Créer le fichier `how_to_use.md`** :
-   ```bash
-   nano how_to_use.md
-   ```
-
-2. **Copier-coller le contenu** ci-dessus dans le fichier.
-
-3. **Ajouter et valider le fichier** :
-   ```bash
-   git add how_to_use.md
-   git commit -m "Ajout du guide d'utilisation complet (how_to_use.md)"
-   git push
-   ```
-
----
-
+### **Étapes pour Ajouter ce 
 ### **Points Clés du Fichier**
 1. **Installation** : Étapes claires pour cloner le dépôt et préparer les scripts.
 2. **Utilisation des scripts** : Instructions détaillées pour les deux scripts (interactif et chiffré).
 3. **Automatisation** : Guide pour utiliser `unattend.xml` avec des exemples concrets.
 4. **Tests** : Méthodes pour tester les scripts en toute sécurité.
 5. **FAQ** : Réponses aux questions courantes.
-
----
+```
