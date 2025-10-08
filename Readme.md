@@ -192,4 +192,4 @@ Win11-LocalAccount-Creator/
 Les suggestions et améliorations sont les bienvenues ! Ouvre une *issue* ou une *pull request* pour contribuer.
 
 ---
-© 2025 [Bertrand Brodeau (valorisa)](https://github.com/valorisa)
+© 2025 [(valorisa)](https://github.com/valorisa)
