@@ -1,10 +1,13 @@
 # Win11-LocalAccount-Creator
+>
 > **Scripts PowerShell pour créer des comptes locaux administrateurs sous Windows 11, avec chiffrement des mots de passe et automatisation avancée.**
 
 ---
 
 ## 📜 Description
+
 Ce projet fournit des **scripts PowerShell** pour créer des comptes locaux administrateurs sur Windows 11, **sans dépendre de l’interface graphique ou d’un compte Microsoft**. Il est conçu pour :
+
 - **Automatiser** la création de comptes après un déploiement.
 - **Sécuriser** les mots de passe via chiffrement ou saisie interactive.
 - **S’intégrer** dans des processus de déploiement (fichiers de réponse, MDT, SCCM).
@@ -12,16 +15,20 @@ Ce projet fournit des **scripts PowerShell** pour créer des comptes locaux admi
 ---
 
 ## 📥 Installation
+
 1. **Clone ce dépôt** :
+
    ```bash
    git clone https://github.com/valorisa/Win11-LocalAccount-Creator.git
    ```
+
 2. Place les scripts dans `C:\Scripts\` (ou un chemin de ton choix) sur la machine Windows 11.
 3. Exécute les scripts comme décrit ci-dessous.
 
 ---
 
 ## 🛠 Prérequis
+
 - **Windows 11** (toutes versions).
 - **PowerShell 5.1+** (intégré par défaut).
 - **Droits administrateur** pour exécuter les scripts.
@@ -31,6 +38,7 @@ Ce projet fournit des **scripts PowerShell** pour créer des comptes locaux admi
 ## 📜 Scripts PowerShell
 
 ### **1. Script principal (saisie interactive du mot de passe)**
+
 ```powershell
 <#
 .SYNOPSIS
@@ -80,6 +88,7 @@ catch {
 ---
 
 ### **2. Script avec mot de passe chiffré (pour déploiement automatisé)**
+
 ```powershell
 <#
 .SYNOPSIS
@@ -119,11 +128,14 @@ catch {
 ---
 
 ### **3. Générer un fichier de mot de passe chiffré**
+
 Pour créer un fichier `.xml` chiffré contenant le mot de passe :
+
 ```powershell
 $securePassword = Read-Host "Entrez le mot de passe à chiffrer" -AsSecureString
 $securePassword | Export-Clixml -Path "C:\secure\password.xml"
 ```
+
 **⚠️ Important** : Le fichier `.xml` ne peut être déchiffré que par le même utilisateur sur la même machine.
 
 ---
@@ -131,14 +143,18 @@ $securePassword | Export-Clixml -Path "C:\secure\password.xml"
 ## 🔧 Utilisation des scripts
 
 ### **1. Exécution manuelle**
+
 1. Ouvre **PowerShell en tant qu’administrateur**.
 2. Exécute le script :
+
    ```powershell
    .\scripts\Create-LocalAdmin.ps1
    ```
 
 ### **2. Automatisation via fichier de réponse (`unattend.xml`)**
+
 Ajoute cette section à ton fichier `unattend.xml` pour exécuter le script après l’installation :
+
 ```xml
 <FirstLogonCommands>
     <SynchronousCommand wcm:action="add">
@@ -152,8 +168,10 @@ Ajoute cette section à ton fichier `unattend.xml` pour exécuter le script apr�
 ---
 
 ## 📂 Structure suggérée du projet
-*(À créer manuellement ou via les commandes ci-dessous)*
-```
+
+(À créer manuellement ou via les commandes ci-dessous)
+
+```bash
 Win11-LocalAccount-Creator/
 ├── README.md
 ├── LICENSE
@@ -170,6 +188,7 @@ Win11-LocalAccount-Creator/
 ---
 
 ## 💡 Propositions de noms pour le projet
+
 1. **Win11-LocalAccount-Creator**
 2. **Win11-OfflineAdmin**
 3. **BypassMSA-Win11**
@@ -182,6 +201,7 @@ Win11-LocalAccount-Creator/
 ---
 
 ## 📌 Notes de sécurité
+
 - **Ne stocke jamais les mots de passe en clair** dans les scripts.
 - **Utilise `SecureString` ou `Export-Clixml`** pour les environnements sensibles.
 - **Teste toujours les scripts** sur une machine virtuelle avant déploiement.
@@ -189,6 +209,7 @@ Win11-LocalAccount-Creator/
 ---
 
 ## 🤝 Contribution
+
 Les suggestions et améliorations sont les bienvenues ! Ouvre une *issue* ou une *pull request* pour contribuer.
 
 ---
